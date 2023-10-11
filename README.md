@@ -22,6 +22,7 @@ O protótipo da aplicação está [nesse link](https://www.figma.com/file/H3gBEi
 - [ ] O endpoint da API que deverá ser usada é `https://economia.awesomeapi.com.br/json/daily/${moeda}/30`.
 - [ ] A moeda a ser pesquisada deverá ser passada como o parâmetro `moeda` do _endpoint_.
 - [ ] Todas os valores da chave ask devem ser listados na tela.
+
   > [Link da documentação da API](https://docs.awesomeapi.com.br/api-de-moedas) caso necessário
 
 ### 4. Tratamento de Erro
