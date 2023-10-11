@@ -1,6 +1,6 @@
 # Casa de Câmbio
 
-O projeto da casa de câmbio é uma aplicação que busca a conversão da taxa de uma moeda para diversas outras.
+O projeto da casa de câmbio é uma aplicação que busca as variações da cotação para os últimos 30 dias de uma moeda específica.
 O protótipo da aplicação está [nesse link](https://www.figma.com/file/H3gBEiF0F94VESCGx9DD17/Casa-de-C%C3%A2mbio?node-id=0%3A1).
 
 ## Requisitos
@@ -21,7 +21,8 @@ O protótipo da aplicação está [nesse link](https://www.figma.com/file/H3gBEi
 
 - [ ] O endpoint da API que deverá ser usada é `https://economia.awesomeapi.com.br/json/daily/${moeda}/30`.
 - [ ] A moeda a ser pesquisada deverá ser passada como o parâmetro `moeda` do _endpoint_.
-- [ ] Todas os valores da chave ask devem ser listados na tela.
+- [ ] Todos os valores da chave ask devem ser listados na tela.
+
   > [Link da documentação da API](https://docs.awesomeapi.com.br/api-de-moedas) caso necessário
 
 ### 4. Tratamento de Erro
