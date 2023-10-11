@@ -1,21 +1,24 @@
 const listaMoedas = document.querySelector('.lista-moedas');
 const titleMoedas = document.querySelector('.moedas-title');
 
+const BASE_CONVERTION = 1000;
+
 const createElementLi = (coin) => {
   const liElement = document.createElement('li'); // cria um elemento li
 
-  const date = new Date(coin.timestamp * 1000); // converte para data
+  const date = new Date(coin.timestamp * BASE_CONVERTION); // converte para data
   const localDate = (date.toLocaleDateString('pt-BR')); // formata de acordo com o requisito
 
-  liElement.classList.add('coin'); // adiciona a classe coin
-  liElement.innerHTML = `
-    ${localDate} - <span>${coin.ask}</span>
-  `; // adiciona o conteúdo do elemento li
+  // adiciona a classe coin
+  liElement.classList.add('coin');
+  // adiciona o conteúdo do elemento li
+  liElement.innerHTML = `${localDate} - <span>${coin.ask}</span>`;
+
   return liElement;
 };
 
-export const renderListMoedas = (coins, title) => {
-  titleMoedas.innerHTML = `Últimas variações de ${title}`;
+export const renderListMoedas = (coins) => {
+  titleMoedas.innerHTML = `Últimas variações de ${coins[0].code}`;
   listaMoedas.innerHTML = '';
 
   coins.forEach((coin) => {

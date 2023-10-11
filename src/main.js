@@ -21,15 +21,7 @@ btnSearch.addEventListener('click', (e) => {
   fetch(endpoint)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      // if (data.base === 'EUR' && moedaValue !== 'EUR') throw new Error();
-
-      // const coins = (Object.entries(data.rates)).map((coin) => ({
-      //   name: coin[0],
-      //   value: coin[1],
-      // }));
-
-      renderListMoedas(data, data[0].code);
+      renderListMoedas(data);
     })
     .catch(() => {
       Swal.fire({
